@@ -18,6 +18,34 @@ Layanan ini dibangun dengan rekayasa infrastruktur yang dioptimalkan untuk menan
 
 ---
 
+## 🔒 Persyaratan Akses & Keanggotaan
+
+> ⚠️ **PENTING: Akses Layanan Terbatas**
+> 
+> **IdGuard DNS** berfungsi sebagai layanan *private DNS resolver*. Infrastruktur ini **hanya dapat diakses** oleh pengguna/klien yang terhubung atau aktif berlangganan jaringan **VPN Lintas Patria Cloud / Patria Technology**. 
+>
+> Query DNS dari IP/jaringan di luar segmen VPN Lintas Patria Cloud akan secara otomatis ditolak (*dropped*) oleh firewall demi menjaga kualitas bandwidth, latensi, dan privasi anggota.
+
+👉 **Belum berlangganan atau ingin mengaktifkan layanan?**
+Isi formulir pendaftaran melalui tombol/link berikut:
+- 📝 **[Formulir Aktivasi IdGuard DNS](https://s.id/idguard-dns)**
+
+---
+
+## 👥 Konfirmasi Penggunaan
+
+Apakah Anda aktif menggunakan layanan ini di jaringan VPN Anda? Bantu kami menghitung jumlah pengguna aktif **IdGuard DNS** dengan mengklik tombol di bawah ini:
+
+<div align="center">
+
+[![Saya Pengguna IDGuard DNS](https://img.shields.io/github/stars/devhuntersecurity/idguard-dns?style=for-the-badge&logo=github&label=Saya%20Pengguna%20IDGuard%20DNS&color=28a745)](https://github.com/devhuntersecurity/idguard-dns/stargazers)
+
+*Klik tombol di atas untuk memberikan Star pada repositori ini sebagai penanda bahwa Anda adalah pengguna aktif.*
+
+</div>
+
+---
+
 ## ⚙️ Fitur Utama
 
 - **🛡️ Threat Intelligence Protection**
@@ -33,11 +61,11 @@ Layanan ini dibangun dengan rekayasa infrastruktur yang dioptimalkan untuk menan
 
 ## 📊 Konfigurasi & Integrasi
 
-Integrasikan infrastruktur jaringan Anda (seperti MikroTik atau *router* utama) dengan menambahkan alamat IP *resolver* IdGuard DNS pada pengaturan DHCP atau DNS statis perangkat Anda.
+Bagi pelanggan aktif **VPN Lintas Patria Cloud / Patria Technology**, Anda dapat mengintegrasikan infrastruktur jaringan (seperti MikroTik atau *router* utama) dengan menambahkan alamat IP *resolver* IdGuard DNS pada pengaturan DHCP atau DNS statis perangkat Anda.
 
 - **Status Konektivitas Regional (ID):** <samp style="color:#28a745">●</samp> **ONLINE** (*All nodes operational*)
 
-> 📌 **Catatan Teknis:** Ketersediaan dan latensi optimal hanya dapat diakses melalui jaringan dengan *routing* domestik (Indonesia).
+> 📌 **Catatan Teknis:** Ketersediaan dan latensi optimal hanya dapat diakses melalui tunnel atau jaringan internal VPN Lintas Patria Cloud.
 
 ---
 
@@ -51,7 +79,7 @@ Dev'Hunter Security berkomitmen penuh terhadap privasi Anda. Kami tidak menyimpa
 
 Kami menghargai kontribusi dari komunitas dan administrator jaringan. Jika Anda memiliki laporan terkait *false-positive* atau memerlukan daftar putih (*whitelist*), silakan hubungi tim kami melalui formulir resmi:
 
-- 🔗 **[Report Blocklist & Whitelist]([https://your-feedback-url.com](https://github.com/devhunter-git/dns-blocklist/issues/new/choose))**
+- 🔗 **[Report Blocklist & Whitelist](https://github.com/devhuntersecurity/dns-blocklist/issues/new/choose)**
 
 ---
 

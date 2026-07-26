@@ -38,9 +38,9 @@ Apakah Anda aktif menggunakan layanan ini di jaringan VPN Anda? Bantu kami mengh
 
 <div align="center">
 
-[![Saya Pengguna IDGuard DNS](https://img.shields.io/badge/dynamic/json?color=28a745&label=Saya%20Pengguna%20IDGuard%20DNS&query=%24.count&url=https%3A%2F%2Fapi.counterapi.dev%2Fv1%2Fdevhuntersecurity%2Fidguard-dns-users%2Fup&style=for-the-badge&logo=shield)](https://s.id/idguard-dns)
+[![Saya Pengguna IDGuard DNS](https://img.shields.io/badge/dynamic/json?color=28a745&label=Saya%20Pengguna%20IDGuard%20DNS&query=%24.count&url=https%3A%2F%2Fapi.counterapi.dev%2Fv1%2Fdevhuntersecurity%2Fidguard-dns-users%2Fup&style=for-the-badge&logo=shield)](#idguard-dns)
 
-*Klik tombol di atas untuk mengonfirmasi bahwa Anda adalah pengguna aktif (Dapat diklik oleh siapa saja tanpa perlu akun GitHub).*
+*Klik tombol di atas untuk mengonfirmasi bahwa Anda adalah pengguna aktif (Tanpa perlu akun GitHub & tetap di halaman yang sama).*
 
 </div>
 

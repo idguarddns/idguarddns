@@ -1,102 +1,162 @@
-<div align="center">
+<p align="center">
+  <a href="https://idguard.ai.id/">
+    <img src="https://idguard.ai.id/assets/img/logo.png" alt="IDGUARD AI CTI" width="150">
+  </a>
+</p>
 
-# IdGuard DNS 🛡️
+<h1 align="center">IDGUARD AI Threat Intel</h1>
 
-### Enterprise-Grade Recursive DNS Resolver & Content Filtering System
+<p align="center">
+  <b>Autonomous Cyber Threat Intelligence & Recursive DNS SOC</b><br>
+  Membantu Anda berselancar secara aman dan terhindar dari ancaman siber!
+</p>
 
-**Dikembangkan oleh Dev'Hunter Security**
-
-</div>
-
----
-
-## 📌 Pendahuluan
-
-**IdGuard DNS** adalah infrastruktur *recursive DNS resolver* kelas *enterprise* yang dirancang khusus untuk memberikan performa jaringan berkecepatan tinggi, latensi rendah, dan perlindungan keamanan siber yang komprehensif. IdGuard DNS secara aktif memitigasi berbagai ancaman siber, seperti *phishing*, *malware delivery*, pelacak analitik (*trackers*), serta memblokir infrastruktur *Command and Control* (C2) dari *botnet* maupun *stalkerware*.
-
-Layanan ini dibangun dengan rekayasa infrastruktur yang dioptimalkan untuk menangani *Queries Per Second* (QPS) tinggi dan terintegrasi penuh dengan sistem *threat intelligence* lokal guna memastikan integritas data dan privasi pengguna tetap terjaga.
-
----
-
-## 🔒 Persyaratan Akses & Keanggotaan
-
-> ⚠️ **PENTING: Akses Layanan Terbatas**
-> 
-> **IdGuard DNS** berfungsi sebagai layanan *private DNS resolver*. Infrastruktur ini **hanya dapat diakses** oleh pengguna/klien yang terhubung atau aktif berlangganan jaringan **VPN Lintas Patria Cloud / Patria Technology**. 
->
-> Query DNS dari IP/jaringan di luar segmen VPN Lintas Patria Cloud akan secara otomatis ditolak (*dropped*) oleh firewall demi menjaga kualitas bandwidth, latensi, dan privasi anggota.
-
-👉 **Belum berlangganan atau ingin mengaktifkan layanan?**
-Isi formulir pendaftaran melalui tombol/link berikut:
-- 📝 **[Formulir Aktivasi IdGuard DNS](https://s.id/idguard-dns)**
+<p align="center">
+  <a href="https://idguard.ai.id/"><img src="https://img.shields.io/badge/Website-idguard.ai.id-blue?style=flat-square" alt="Website"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Uptime-99.98%25-brightgreen?style=flat-square" alt="Uptime"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Engine-Unbound_1.20%2B-orange?style=flat-square" alt="DNS Engine"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Blocklist-2.8M%2B_Domains-red?style=flat-square" alt="Blocklist"></a>
+</p>
 
 ---
 
-## 👥 Konfirmasi Penggunaan
+## 📋 Daftar Isi
 
-Apakah Anda aktif menggunakan layanan ini di jaringan VPN Anda? Bantu kami menghitung jumlah pengguna aktif **IdGuard DNS** dengan mengklik tombol di bawah ini:
-
-<div align="center">
-
-[![Saya Pengguna IDGuard DNS](https://img.shields.io/badge/dynamic/json?color=28a745&label=Saya%20Pengguna%20IDGuard%20DNS&query=%24.count&url=https%3A%2F%2Fapi.counterapi.dev%2Fv1%2Fdevhuntersecurity%2Fidguard-dns-users&style=for-the-badge&logo=shield&cacheSeconds=0)](https://api.counterapi.dev/v1/devhuntersecurity/idguard-dns-users/up)
-
-*Klik tombol di atas untuk mengonfirmasi bahwa Anda adalah pengguna aktif (Dapat diklik oleh siapa saja tanpa akun GitHub).*
-
-</div>
-
----
-
-## ⚙️ Fitur Utama
-
-- **🛡️ Threat Intelligence Protection**
-  Pencegahan otomatis terhadap akses ke domain berbahaya, situs *phishing*, dan komunikasi C2 *botnet* secara *real-time*.
-- **⚡ High-Performance Computing & Tuning**
-  Dioptimalkan melalui penyesuaian parameter tingkat sistem operasi dan *cache* yang dirancang untuk menangani beban *query* tinggi pada jaringan berskala besar.
-- **🚫 SafeSearch & Content Filtering**
-  Penerapan protokol keamanan secara otomatis pada berbagai platform pencarian global untuk melindungi pengguna dari konten dewasa dan tidak pantas.
-- **🇮🇩 Geolocation-Aware Routing**
-  Infrastruktur dan *resolver* yang dirancang khusus untuk memenuhi standar latensi dan regulasi lalu lintas data di Indonesia.
+* [Peladen DNS Utama](#-peladen-dns-utama)
+  * [Standard DNS](#1-standard-dns)
+  * [DNS-over-TLS (DoT)](#2-dns-over-tls-dot)
+  * [DNS-over-HTTPS (DoH)](#3-dns-over-https-doh)
+* [Daftar Blokir DNS (Blocklist)](#-daftar-blokir-dns-blocklist)
+* [Panduan Pemasangan](#-panduan-pemasangan)
+  * [Android](#android)
+  * [iOS / macOS](#ios--macos)
+  * [Peramban Web (Browser)](#peramban-web-browser)
+  * [MikroTik RouterOS](#mikrotik-routeros)
+  * [Linux (systemd-resolved)](#linux-systemd-resolved)
+* [Status Peladen & Uji Keamanan](#-status-peladen--uji-keamanan)
+* [Pelaporan & Kontak](#-pelaporan--kontak)
+* [Lisensi & Kredit](#-lisensi--kredit)
 
 ---
 
-## 📊 Konfigurasi & Integrasi
+## ℹ️ Tentang
 
-Bagi pelanggan aktif **VPN Lintas Patria Cloud / Patria Technology**, Anda dapat mengintegrasikan infrastruktur jaringan (seperti MikroTik atau *router* utama) dengan menambahkan alamat IP *resolver* IdGuard DNS pada pengaturan DHCP atau DNS statis perangkat Anda.
+**IDGUARD AI CTI** adalah implementasi *DNS Resolver* berbasis *Cyber Threat Intelligence* yang dilengkapi pemfilteran otomatis untuk memblokir malware, phishing, scam, judi online, dan ancaman siber lainnya secara *real-time*.
 
-- **Status Konektivitas Regional (ID):** <samp style="color:#28a745">●</samp> **ONLINE** (*All nodes operational*)
-
-> 📌 **Catatan Teknis:** Ketersediaan dan latensi optimal hanya dapat diakses melalui tunnel atau jaringan internal VPN Lintas Patria Cloud.
+Diprakarsai oleh tim **JawaTimur Cyber Security** dan **DevHunter Security**, IDGUARD menjamin privasi pengguna dan tidak pernah menyimpan catatan kueri (*query logs*) kecuali saat terjadi pelaporan masalah teknis untuk melacak *bug*.
 
 ---
 
-## 🔒 Kebijakan & Privasi
+## 🌐 Peladen DNS Utama
 
-Dev'Hunter Security berkomitmen penuh terhadap privasi Anda. Kami tidak menyimpan atau menganalisis *log query* yang mengarah pada identitas pengguna (*No-Log Policy* untuk data pribadi), sehingga privasi tetap terlindungi.
+### 1. Standard DNS
+Gunakan alamat IP berikut pada router, server, atau adapter jaringan perangkat Anda:
+
+| Protokol | Alamat IP | Port |
+| :--- | :--- | :--- |
+| **IPv4 Primary** | `103.133.222.156` | `53` |
+| **IPv6 Primary** | `2001:df4:b100:3:1:1:8c2a:131b` | `53` |
+
+### 2. DNS-over-TLS (DoT)
+Khusus untuk fitur *Private DNS* pada Android (v9+), iOS Profile, atau Linux `systemd-resolved`:
+
+| Protokol | Alamat / Hostname | Port |
+| :--- | :--- | :--- |
+| **DNS-over-TLS** | `dns.idguard.ai.id` | `853` |
+
+### 3. DNS-over-HTTPS (DoH)
+Dapat digunakan pada peramban web modern (Chrome, Firefox, Brave, Edge) serta RouterOS v7:
+
+| Protokol | URL Endpoint | Port |
+| :--- | :--- | :--- |
+| **DNS-over-HTTPS** | `https://dns.idguard.ai.id/dns-query` | `443` |
 
 ---
 
-## 🤝 Dukungan & Umpan Balik
+## 🛡️ Daftar Blokir DNS (Blocklist)
 
-Kami menghargai kontribusi dari komunitas dan administrator jaringan. Jika Anda memiliki laporan terkait *false-positive* atau memerlukan daftar putih (*whitelist*), silakan hubungi tim kami melalui formulir resmi:
+IDGUARD mengintegrasikan berbagai sumber *threat intelligence* tepercaya untuk memastikan perlindungan optimal:
 
-- 🔗 **[Report Blocklist & Whitelist](https://github.com/devhuntersecurity/dns-blocklist/issues/new/choose)**
-
----
-
-## 📜 Lisensi & Hak Cipta
-
-Seluruh kode sumber, konfigurasi, dan aset visual dalam repositori ini dilindungi oleh hak cipta.
-
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-
-**Copyright (c) 2026 DevHunter Security.**
-
-Penggunaan materi ini diizinkan selama tetap mencantumkan atribusi asli. Namun, Anda **dilarang keras** untuk melakukan modifikasi (No-Derivatives) atau menggunakan materi ini untuk tujuan komersial (Non-Commercial) tanpa izin tertulis dari pihak DevHunter Security.
+* **IDGUARD AI CTI Custom Rules**
+* **PhishDestroy & URLHaus** (Phishing & Malware)
+* **HaGeZi Threat Intelligence**
+* **TrustPositif** (Komdigi / Regulasi Indonesia)
+* **OISD Big**
 
 ---
 
-<div align="center">
+## 🚀 Panduan Pemasangan
 
-**Dev'Hunter Security** *Enterprise Cybersecurity and Infrastructure Operations*
+### Android
+1. Buka menu **Pengaturan (Settings)** > **Koneksi / Jaringan & Internet**.
+2. Pilih **Pengaturan Koneksi Lainnya** > **DNS Pribadi (Private DNS)**.
+3. Pilih **Nama Host Penyedia DNS Pribadi**.
+4. Isi dengan hostname: `dns.idguard.ai.id`
+5. Simpan perubahan.
 
-</div>
+### iOS / macOS
+1. Unduh atau buat Profil DoH/DoT Apple.
+2. Buka **Settings** > **Profile Downloaded** lalu klik **Install**.
+3. Aktifkan profile IDGUARD DNS pada pengaturan *VPN & Device Management*.
+
+### Peramban Web (Browser)
+1. Buka **Pengaturan (Settings)** peramban web Anda.
+2. Cari menu **Security** / **Keamanan & Privasi**.
+3. Aktifkan opsi **Gunakan DNS Aman (Use Secure DNS)**.
+4. Pilih **Kustom (Custom)** lalu masukkan URL berikut:
+   ```text
+   https://dns.idguard.ai.id/dns-query
+   ```
+
+### MikroTik RouterOS
+Gunakan baris perintah berikut pada Terminal RouterOS v7:
+
+```routeros
+/tool fetch url="https://curl.se/ca/cacert.pem" download=yes
+/certificate import file-name=cacert.pem passphrase=""
+/ip dns set use-doh-server="https://dns.idguard.ai.id/dns-query" verify-doh-cert=yes
+/ip dns cache flush
+```
+
+### Linux (systemd-resolved)
+Edit berkas `/etc/systemd/resolved.conf`:
+
+```ini
+[Resolve]
+DNS=103.133.222.156#dns.idguard.ai.id
+FallbackDNS=2001:df4:b100:3:1:1:8c2a:131b#dns.idguard.ai.id
+DNSOverTLS=yes
+```
+
+Lalu jalankan ulang layanannya:
+```bash
+sudo systemctl restart systemd-resolved
+```
+
+---
+
+## 📊 Status Peladen & Uji Keamanan
+
+| Pengujian | Status / Nilai | Keterangan |
+| :--- | :--- | :--- |
+| **SLA Uptime** | `99.98%` | *Monitored 24/7* |
+| **Response Action** | `NXDOMAIN` | Menghentikan domain berbahaya secara langsung |
+| **SSL Security Test** | `A+` | ImmuniWeb & SSL Labs Qualified |
+
+---
+
+## 📩 Pelaporan & Kontak
+
+Jika menemukan situs yang mengalami *False Positive* (salah blokir) atau ingin melaporkan indikasi domain ancaman siber baru:
+
+* **Telegram Bot/Group:** [t.me/idguard-report](https://t.me/idguard-report)
+* **Email:** [report@idguard.ai.id](mailto:report@idguard.ai.id)
+* **Waktu Respon SLA:** `< 24 Jam`
+
+---
+
+## 🤝 Lisensi & Kredit
+
+Dikembangkan dan dikelola bersama oleh:
+* **JawaTimur Cyber Security**
+* **DevHunter Security**

@@ -23,22 +23,18 @@
 
 ---
 
-## 📋 Daftar Isi
+<details open>
+  <summary><b>📌 DAFTAR ISI (Klik untuk Membuka / Menutup)</b></summary>
+  <br>
 
-* [Peladen DNS Utama](#-peladen-dns-utama)
-  * [Standard DNS](#1-standard-dns)
-  * [DNS-over-TLS (DoT)](#2-dns-over-tls-dot)
-  * [DNS-over-HTTPS (DoH)](#3-dns-over-https-doh)
-* [Daftar Blokir DNS (Blocklist)](#-daftar-blokir-dns-blocklist)
-* [Panduan Pemasangan](#-panduan-pemasangan)
-  * [Android](#android)
-  * [iOS / macOS](#ios--macos)
-  * [Peramban Web (Browser)](#peramban-web-browser)
-  * [MikroTik RouterOS](#mikrotik-routeros)
-  * [Linux (systemd-resolved)](#linux-systemd-resolved)
-* [Status Peladen & Uji Keamanan](#-status-peladen--uji-keamanan)
-* [Pelaporan & Kontak](#-pelaporan--kontak)
-* [Lisensi & Kredit](#-lisensi--kredit)
+  - [ℹ️ Tentang](#-tentang)
+  - [🌐 Peladen DNS Utama](#-peladen-dns-utama)
+  - [🛡️ Daftar Blokir DNS (Blocklist)](#%EF%B8%8F-daftar-blokir-dns-blocklist)
+  - [🚀 Panduan Pemasangan](#-panduan-pemasangan)
+  - [📊 Status Peladen & Uji Keamanan](#-status-peladen--uji-keamanan)
+  - [📩 Pelaporan & Kontak](#-pelaporan--kontak)
+  - [🤝 Lisensi & Kredit](#-lisensi--kredit)
+</details>
 
 ---
 
@@ -52,7 +48,9 @@ Diprakarsai oleh tim **JawaTimur Cyber Security** dan **DevHunter Security**, ID
 
 ## 🌐 Peladen DNS Utama
 
-### 1. Standard DNS
+<details>
+  <summary><b>1. Standard DNS (IPv4 / IPv6)</b></summary>
+  <br>
 
 Gunakan alamat IP berikut pada router, server, atau adapter jaringan perangkat Anda:
 
@@ -60,54 +58,74 @@ Gunakan alamat IP berikut pada router, server, atau adapter jaringan perangkat A
 | :--- | :--- | :--- |
 | **IPv4 Primary** | `103.133.222.156` | `53` |
 | **IPv6 Primary** | `2001:df4:b100:3:1:1:8c2a:131b` | `53` |
+</details>
 
-### 2. DNS-over-TLS (DoT)
+<details>
+  <summary><b>2. DNS-over-TLS (DoT)</b></summary>
+  <br>
 
 Khusus untuk fitur *Private DNS* pada Android (v9+), iOS Profile, atau Linux `systemd-resolved`:
 
 | Protokol | Alamat / Hostname | Port |
 | :--- | :--- | :--- |
 | **DNS-over-TLS** | `dns.idguard.ai.id` | `853` |
+</details>
 
-### 3. DNS-over-HTTPS (DoH)
+<details>
+  <summary><b>3. DNS-over-HTTPS (DoH)</b></summary>
+  <br>
 
 Dapat digunakan pada peramban web modern (Chrome, Firefox, Brave, Edge) serta RouterOS v7:
 
 | Protokol | URL Endpoint | Port |
 | :--- | :--- | :--- |
 | **DNS-over-HTTPS** | `https://dns.idguard.ai.id/dns-query` | `443` |
+</details>
 
 ---
 
 ## 🛡️ Daftar Blokir DNS (Blocklist)
 
+<details>
+  <summary><b>Lihat Sumber & Kategori Blocklist</b></summary>
+  <br>
+
 IDGUARD mengintegrasikan berbagai sumber *threat intelligence* tepercaya untuk memastikan perlindungan optimal:
 
-* **IDGUARD AI CTI Custom Rules**
-* **PhishDestroy & URLHaus** (Phishing & Malware)
-* **HaGeZi Threat Intelligence**
-* **TrustPositif** (Kompimfo / Regulasi Lokal)
-* **OISD Big & SmartDNS Rules**
+- **IDGUARD AI CTI Custom Rules**
+- **PhishDestroy & URLHaus** (Phishing & Malware)
+- **HaGeZi Threat Intelligence**
+- **TrustPositif** (Kominfo / Regulasi Lokal)
+- **OISD Big & SmartDNS Rules**
+</details>
 
 ---
 
 ## 🚀 Panduan Pemasangan
 
-### Android
+<details>
+  <summary><b>📱 Android (Private DNS)</b></summary>
+  <br>
 
 1. Buka menu **Pengaturan (Settings)** > **Koneksi / Jaringan & Internet**.
 2. Pilih **Pengaturan Koneksi Lainnya** > **DNS Pribadi (Private DNS)**.
 3. Pilih **Nama Host Penyedia DNS Pribadi**.
 4. Isi dengan hostname: `dns.idguard.ai.id`
 5. Simpan perubahan.
+</details>
 
-### iOS / macOS
+<details>
+  <summary><b>🍏 iOS / macOS</b></summary>
+  <br>
 
 1. Unduh atau buat Profil DoH/DoT Apple.
 2. Buka **Settings** > **Profile Downloaded** lalu klik **Install**.
 3. Aktifkan profile IDGUARD DNS pada pengaturan *VPN & Device Management*.
+</details>
 
-### Peramban Web (Browser)
+<details>
+  <summary><b>🌐 Peramban Web (Browser)</b></summary>
+  <br>
 
 1. Buka **Pengaturan (Settings)** peramban web Anda.
 2. Cari menu **Security** / **Keamanan & Privasi**.
@@ -116,8 +134,11 @@ IDGUARD mengintegrasikan berbagai sumber *threat intelligence* tepercaya untuk m
    ```text
    https://dns.idguard.ai.id/dns-query
    ```
+</details>
 
-### MikroTik RouterOS
+<details>
+  <summary><b>📶 MikroTik RouterOS</b></summary>
+  <br>
 
 Gunakan baris perintah berikut pada Terminal RouterOS v7:
 
@@ -127,8 +148,11 @@ Gunakan baris perintah berikut pada Terminal RouterOS v7:
 /ip dns set use-doh-server="https://dns.idguard.ai.id/dns-query" verify-doh-cert=yes
 /ip dns cache flush
 ```
+</details>
 
-### Linux (systemd-resolved)
+<details>
+  <summary><b>🐧 Linux (systemd-resolved)</b></summary>
+  <br>
 
 Edit berkas `/etc/systemd/resolved.conf`:
 
@@ -140,36 +164,45 @@ DNSOverTLS=yes
 ```
 
 Lalu jalankan ulang layanannya:
-
 ```bash
 sudo systemctl restart systemd-resolved
 ```
+</details>
 
 ---
 
 ## 📊 Status Peladen & Uji Keamanan
+
+<details>
+  <summary><b>Lihat Matriks Status & SLA</b></summary>
+  <br>
 
 | Pengujian | Status / Nilai | Keterangan |
 | :--- | :--- | :--- |
 | **SLA Uptime** | `99.98%` | *Monitored 24/7* |
 | **Response Action** | `NXDOMAIN` | Menghentikan domain berbahaya secara langsung |
 | **SSL Security Test** | `A+` | ImmuniWeb & SSL Labs Qualified |
+</details>
 
 ---
 
 ## 📩 Pelaporan & Kontak
 
+<details>
+  <summary><b>Lihat Informasi Pelaporan (False Positive / Malware)</b></summary>
+  <br>
+
 Jika menemukan situs yang mengalami *False Positive* (salah blokir) atau ingin melaporkan indikasi domain ancaman siber baru:
 
-* **Telegram Bot/Group:** [t.me/idguard-report](https://t.me/idguard-report)
-* **Email:** [report@idguard.ai.id](mailto:report@idguard.ai.id)
-* **Waktu Respon SLA:** `< 24 Jam`
+- **Telegram Bot/Group:** [t.me/idguard-report](https://t.me/idguard-report)
+- **Email:** [report@idguard.ai.id](mailto:report@idguard.ai.id)
+- **Waktu Respon SLA:** `< 24 Jam`
+</details>
 
 ---
 
 ## 🤝 Lisensi & Kredit
 
 Dikembangkan dan dikelola bersama oleh:
-
-* **JawaTimur Cyber Security**
-* **DevHunter Security**
+- **JawaTimur Cyber Security**
+- **DevHunter Security**

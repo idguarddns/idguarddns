@@ -194,7 +194,7 @@ sudo systemctl restart systemd-resolved
 
 Jika menemukan situs yang mengalami *False Positive* (salah blokir) atau ingin melaporkan indikasi domain ancaman siber baru:
 
-- **Telegram Bot/Group:** [t.me/idguard-report](https://t.me/idguard-report)
+- **Telegram Bot/Group:** [t.me/idguard-report](https://t.me/idguardreport)
 - **Email:** [report@idguard.ai.id](mailto:report@idguard.ai.id)
 - **Waktu Respon SLA:** `< 24 Jam`
 </details>

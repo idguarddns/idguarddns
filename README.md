@@ -1,21 +1,24 @@
 <p align="center">
   <a href="https://idguard.ai.id/">
-    <img src="https://idguard.ai.id/assets/img/logo.png" alt="IDGUARD AI CTI" width="150">
+    <img src="https://github.com/idguard-dns.png" alt="IDGUARD AI CTI Logo" width="128" height="128">
   </a>
 </p>
 
-<h1 align="center">IDGUARD AI Threat Intel</h1>
+<h1 align="center">IDGUARD AI THREAT INTEL</h1>
 
 <p align="center">
-  <b>Autonomous Cyber Threat Intelligence & Recursive DNS SOC</b><br>
-  Membantu Anda berselancar secara aman dan terhindar dari ancaman siber!
+  <strong>Autonomous Cyber Threat Intelligence & Recursive DNS SOC</strong>
+</p>
+
+<p align="center">
+  Pusat Komando Security Operations Center (SOC) dengan mesin filtering DNS cerdas. Menggabungkan enkripsi DoH & DoT dengan integrasi basis data ancaman siber real-time.
 </p>
 
 <p align="center">
   <a href="https://idguard.ai.id/"><img src="https://img.shields.io/badge/Website-idguard.ai.id-blue?style=flat-square" alt="Website"></a>
   <a href="#"><img src="https://img.shields.io/badge/Uptime-99.98%25-brightgreen?style=flat-square" alt="Uptime"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Engine-Unbound_1.20%2B-orange?style=flat-square" alt="DNS Engine"></a>
   <a href="#"><img src="https://img.shields.io/badge/Blocklist-2.8M%2B_Domains-red?style=flat-square" alt="Blocklist"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Engine-Unbound_1.20%2B-orange?style=flat-square" alt="Engine"></a>
 </p>
 
 ---
@@ -50,6 +53,7 @@ Diprakarsai oleh tim **JawaTimur Cyber Security** dan **DevHunter Security**, ID
 ## 🌐 Peladen DNS Utama
 
 ### 1. Standard DNS
+
 Gunakan alamat IP berikut pada router, server, atau adapter jaringan perangkat Anda:
 
 | Protokol | Alamat IP | Port |
@@ -58,6 +62,7 @@ Gunakan alamat IP berikut pada router, server, atau adapter jaringan perangkat A
 | **IPv6 Primary** | `2001:df4:b100:3:1:1:8c2a:131b` | `53` |
 
 ### 2. DNS-over-TLS (DoT)
+
 Khusus untuk fitur *Private DNS* pada Android (v9+), iOS Profile, atau Linux `systemd-resolved`:
 
 | Protokol | Alamat / Hostname | Port |
@@ -65,6 +70,7 @@ Khusus untuk fitur *Private DNS* pada Android (v9+), iOS Profile, atau Linux `sy
 | **DNS-over-TLS** | `dns.idguard.ai.id` | `853` |
 
 ### 3. DNS-over-HTTPS (DoH)
+
 Dapat digunakan pada peramban web modern (Chrome, Firefox, Brave, Edge) serta RouterOS v7:
 
 | Protokol | URL Endpoint | Port |
@@ -80,14 +86,15 @@ IDGUARD mengintegrasikan berbagai sumber *threat intelligence* tepercaya untuk m
 * **IDGUARD AI CTI Custom Rules**
 * **PhishDestroy & URLHaus** (Phishing & Malware)
 * **HaGeZi Threat Intelligence**
-* **TrustPositif** (Komdigi / Regulasi Indonesia)
-* **OISD Big**
+* **TrustPositif** (Kompimfo / Regulasi Lokal)
+* **OISD Big & SmartDNS Rules**
 
 ---
 
 ## 🚀 Panduan Pemasangan
 
 ### Android
+
 1. Buka menu **Pengaturan (Settings)** > **Koneksi / Jaringan & Internet**.
 2. Pilih **Pengaturan Koneksi Lainnya** > **DNS Pribadi (Private DNS)**.
 3. Pilih **Nama Host Penyedia DNS Pribadi**.
@@ -95,11 +102,13 @@ IDGUARD mengintegrasikan berbagai sumber *threat intelligence* tepercaya untuk m
 5. Simpan perubahan.
 
 ### iOS / macOS
+
 1. Unduh atau buat Profil DoH/DoT Apple.
 2. Buka **Settings** > **Profile Downloaded** lalu klik **Install**.
 3. Aktifkan profile IDGUARD DNS pada pengaturan *VPN & Device Management*.
 
 ### Peramban Web (Browser)
+
 1. Buka **Pengaturan (Settings)** peramban web Anda.
 2. Cari menu **Security** / **Keamanan & Privasi**.
 3. Aktifkan opsi **Gunakan DNS Aman (Use Secure DNS)**.
@@ -109,6 +118,7 @@ IDGUARD mengintegrasikan berbagai sumber *threat intelligence* tepercaya untuk m
    ```
 
 ### MikroTik RouterOS
+
 Gunakan baris perintah berikut pada Terminal RouterOS v7:
 
 ```routeros
@@ -119,6 +129,7 @@ Gunakan baris perintah berikut pada Terminal RouterOS v7:
 ```
 
 ### Linux (systemd-resolved)
+
 Edit berkas `/etc/systemd/resolved.conf`:
 
 ```ini
@@ -129,6 +140,7 @@ DNSOverTLS=yes
 ```
 
 Lalu jalankan ulang layanannya:
+
 ```bash
 sudo systemctl restart systemd-resolved
 ```
@@ -158,5 +170,6 @@ Jika menemukan situs yang mengalami *False Positive* (salah blokir) atau ingin m
 ## 🤝 Lisensi & Kredit
 
 Dikembangkan dan dikelola bersama oleh:
+
 * **JawaTimur Cyber Security**
 * **DevHunter Security**

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://idguard.ai.id/">
-    <img src="https://github.com/idguard-dns.png" alt="IDGUARD AI CTI Logo" width="128" height="128">
+    <img src="https://github.com/idguarddns.png" alt="IDGUARD AI CTI Logo" width="128" height="128">
   </a>
 </p>
 
